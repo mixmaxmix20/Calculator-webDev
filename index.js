@@ -1,7 +1,24 @@
 function init() {
+    const container = document.getElementById("kontener")
+    if (container) {
+        container.addEventListener("click", function (event) {
+            const button = event.target.closest("button")
+            if (button && container.contains(button)) {
+                user_input(button.id)
+            }
+        })
+    }
+
+    const clearBtn = document.getElementById("historia-clear-btn")
+    if (clearBtn) {
+        clearBtn.addEventListener("click", clearHistory)
+    }
+
     document.addEventListener("keydown", function (event) {
         const key = document.querySelector(`button[data-key="${event.key}"]`)
-        key.click()
+        if (key) {
+            key.click()
+        }
     })
 }
 
