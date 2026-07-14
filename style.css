@@ -1,3 +1,10 @@
+button.field, button.large_field {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
 #main {
     display: flex;
     gap: 1rem;
