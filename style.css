@@ -1,12 +1,99 @@
+#main {
+    display: flex;
+    gap: 1rem;
+}
+
+#historia {
+    border: solid 2px black;
+    text-align: center;
+    padding: 0.5rem 3rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+#historia-lista {
+    flex: 1;
+    line-height: 0.6em;
+}
+
+.historia-clear {
+    transition: all 0.2s;
+
+    border: solid 2px black;
+    font-size: 0.7em;
+    width: 8em;
+    height: 2em;
+    margin: 0 auto;
+    background-color: lightgray;
+    align-content: center;
+}
+
+.historia-clear:hover {
+    background-color: cyan;
+}
+
+.historia-clear:active {
+    background-color: cyan;
+    transform: scale(0.9);
+}
+
+#kontener {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+    border: solid 2px black;
+    background-color: antiquewhite;
+}
+
+.display {
+    text-align: right;
+    margin: 7px;
+    line-height: 50px;
+    border: solid 2px black;
+    grid-column: span 4;
+    background-color: white;
+}
+
 .field {
-    background-color: gray;
+    transition: all 0.2s;
+
+    background-color: lightgray;
     border: solid 2px black;
     width: 3em;
     margin: 5px;
     height: 3em;
     float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .field:hover {
-    background-color: white;
+    background-color: cyan;
+}
+
+.large_field {
+    transition: all 0.2s;
+
+    background-color: lightgray;
+    border: solid 2px black;
+    width: 7em;
+    margin: 5px;
+    height: 3em;
+    float: left;
+    grid-column: span 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large_field:hover {
+    background-color: cyan;
+}
+
+.field:active, .large_field:active {
+    background-color: cyan;
+    transform: scale(0.9);
 }
