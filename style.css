@@ -1,3 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button.field, button.large_field {
     font-family: inherit;
     font-size: inherit;
@@ -7,13 +17,14 @@ button.field, button.large_field {
 
 #main {
     display: flex;
-    gap: 1rem;
+    gap: 1em;
+    font-size: 2.7vmin;
 }
 
 #historia {
     border: solid 2px black;
     text-align: center;
-    padding: 0.5rem 3rem;
+    padding: 0.5em 3em;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
@@ -55,8 +66,8 @@ button.field, button.large_field {
 
 .display {
     text-align: right;
-    margin: 7px;
-    line-height: 50px;
+    margin: 0.4em;
+    line-height: 3em;
     border: solid 2px black;
     grid-column: span 4;
     background-color: white;
@@ -68,7 +79,7 @@ button.field, button.large_field {
     background-color: lightgray;
     border: solid 2px black;
     width: 3em;
-    margin: 5px;
+    margin: 0.3em;
     height: 3em;
     display: flex;
     align-items: center;
@@ -85,7 +96,7 @@ button.field, button.large_field {
     background-color: lightgray;
     border: solid 2px black;
     width: 7em;
-    margin: 5px;
+    margin: 0.3em;
     height: 3em;
     grid-column: span 2;
 
