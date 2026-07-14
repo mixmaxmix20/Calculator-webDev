@@ -104,7 +104,11 @@ function calculate () {
         i++
     }
 
-    let finalResult = tokens[0].toString()
+    let finalResult = tokens[0]
+    if (typeof finalResult === 'number') {
+        finalResult = parseFloat(finalResult.toPrecision(12))
+    }
+    finalResult = finalResult.toString()
     finalResult = finalResult.replace("-", "\u2212")
     return finalResult
 }
@@ -113,6 +117,17 @@ function user_input(id) {
     const operators = ["\u2212", "\u00F7", "\u002B", "x"]
     let display = document.getElementById("f_Display")
     let value = document.getElementById(id).innerHTML
+
+    if (display.innerHTML === "Nie można dzielić przez zero") {
+        if (id === "f_C" || id === "f_B") {
+            display.innerHTML = "0";
+            return;
+        } else if (!isNaN(value) || value === "\u2212") {
+            display.innerHTML = "0";
+        } else {
+            return;
+        }
+    }
 
     if (id === "f_C") {
         display.innerHTML = 0
