@@ -70,7 +70,6 @@ button.field, button.large_field {
     width: 3em;
     margin: 5px;
     height: 3em;
-    float: left;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +87,6 @@ button.field, button.large_field {
     width: 7em;
     margin: 5px;
     height: 3em;
-    float: left;
     grid-column: span 2;
 
     display: flex;
